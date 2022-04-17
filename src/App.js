@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './Componests/Home/Home';
+import Header from './Componests/Header/Header';
+import Footer from './Componests/Footer/Footer';
+
+import Blogs from './Componests/Blogs/Blogs';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import About from './Componests/About/About';
+import Login from './Componests/Login/Login';
+import SignUp from './Componests/SignUp/SignUp';
+import NotFound from './Componests/NotFound/NotFound';
+import RequirAuth from './Componests/RequirAuth/RequirAuth';
+import Details from './Componests/Details/Details';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Routes>
+      
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        
+        <Route path='/details' element={<Details></Details>}></Route>
+
+
+        {/* <Route path='/about' element={
+        <RequirAuth>
+          <About></About> log in kora na thakle ai khana dokte dawa hobena
+        </RequirAuth>
+        }></Route> */}
+
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
+        
+      </Routes>
+      
+      <Footer></Footer>
     </div>
   );
 }
