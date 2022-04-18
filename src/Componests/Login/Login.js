@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import img from '../../images/GitHub-Mark.png';
 import './Login.css';
@@ -15,6 +15,9 @@ const Login = () => {
 
 
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
 
   const [
@@ -33,7 +36,7 @@ const Login = () => {
   }
 
   if (user) {
-    navigate('/home');
+    navigate(from, {replace: true});
   }
   const handeluserSignIn = event => {
     event.preventDefault();
