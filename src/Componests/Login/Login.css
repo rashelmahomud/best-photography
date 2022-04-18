@@ -3,3 +3,9 @@
     margin: 0 auto;
   
 }
+
+button.btn.btn-primary.signinBtn img {
+    width: 31px;
+    height: 30px;
+    border-radius: 13px;
+}

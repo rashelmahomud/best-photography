@@ -1,6 +1,6 @@
 # Best-photography
 
-This project was bootstrapped with [Create React App]().
+This project was Best Photography [Create React App]().
 
 
 

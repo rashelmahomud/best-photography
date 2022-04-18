@@ -3,9 +3,9 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import useFirebase from '../../hooks/useFirebase';
-import SignUp from '../SignUp/SignUp';
+import img from '../../images/GitHub-Mark.png';
 import './Login.css';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
   // const {singInWighGoogle} = useFirebase();
@@ -32,12 +32,12 @@ const Login = () => {
     setPassword(event.target.value);
   }
 
-  if(user){
+  if (user) {
     navigate('/home');
   }
   const handeluserSignIn = event => {
     event.preventDefault();
-    signInWithEmailAndPassword(email,password);
+    signInWithEmailAndPassword(email, password);
   }
   return (
     <div className='container my-5'>
@@ -68,6 +68,8 @@ const Login = () => {
 
 
         </Form>
+        <SocialLogin></SocialLogin>
+
       </div>
     </div>
   );

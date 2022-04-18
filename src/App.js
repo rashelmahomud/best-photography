@@ -12,6 +12,7 @@ import SignUp from './Componests/SignUp/SignUp';
 import NotFound from './Componests/NotFound/NotFound';
 import RequirAuth from './Componests/RequirAuth/RequirAuth';
 import Details from './Componests/Details/Details';
+import SocialLogin from './Componests/Login/SocialLogin/SocialLogin';
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
         
       </Routes>
+     
       
       <Footer></Footer>
     </div>
