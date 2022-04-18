@@ -12,6 +12,7 @@ import SignUp from './Componests/SignUp/SignUp';
 import NotFound from './Componests/NotFound/NotFound';
 import Details from './Componests/Details/Details';
 import RequirAuth from './Componests/RequirAuth/RequirAuth';
+import Discount from './Componests/Discount/Discount';
 
 
 function App() {
@@ -23,12 +24,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        {/* ata ota dita hobe */}
-        <Route path='/about' element={<RequirAuth><About></About></RequirAuth>}></Route>
-
+        <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
-        <Route path='/details' element={<Details></Details>}></Route>
+        <Route path='/details' element={<RequirAuth><Details></Details></RequirAuth>}></Route>
+        <Route path='/discount' element={<RequirAuth><Discount></Discount></RequirAuth>}></Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
 

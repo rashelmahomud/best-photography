@@ -3,8 +3,10 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { getAuth, sendEmailVerification } from "firebase/auth";
 import './SingUp.css';
 
+// auth = getAuth();
 
 const SignUp = () => {
 
@@ -41,7 +43,15 @@ const [ createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPasswor
         return;
       }
       createUserWithEmailAndPassword(email, password);
+      // verfyEmail();
   }
+
+  // const verfyEmail = () => {
+  //   sendEmailVerification(auth.currentUser)
+  //   .then(() => {
+  //     console.log('hello');
+  //   });
+  // }
 
   return (
     <div className='container w-50 my-5'>
