@@ -3,7 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import img from '../../images/GitHub-Mark.png';
+import img from '../../images/social/github.png';
 import './Login.css';
 import SocialLogin from './SocialLogin/SocialLogin';
 
