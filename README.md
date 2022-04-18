@@ -1,6 +1,7 @@
 # Best-photography
 
-This project was Best Photography [Create React App]('https://best-photography-19d6d.web.app/').
+#live link:
+https://best-photography-19d6d.web.app/
 
 
 
