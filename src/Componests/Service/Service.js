@@ -15,11 +15,7 @@ const Service = ({ servic }) => {
           <img src={img} alt="" />
           <h3>{name}</h3>
           <p>This is a Best Photograpy service provider Maker. I can any Photograpy short and excellent all photo Click our service.My Fevorite work.</p>
-
-          {/* <Link to={`/details/${id}`}>
-          <button className="btn-primary mb-3 px-3 py-2 rounded-2"><span className="fw-bold">{name}:Details</span></button>
-        </Link> */}
-        
+          
           <Link to={'/details'}>
           <button className="btn-primary mb-3 px-3 py-2 rounded-2"><span className="fw-bold">Details</span></button>
         </Link>

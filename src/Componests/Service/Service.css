@@ -10,3 +10,17 @@
                  -10px -10px 10px white;
 }
 
+.single-service {
+    margin: 10px;
+    border: 1px solid #f0e7e7;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.single-service:hover {
+    margin: 10px;
+    border: 1px solid #f0e7e7;
+    border-radius: 10px;
+    box-shadow: 3px 4px 1px 1px;
+    transition: 0.3s;
+}
